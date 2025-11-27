@@ -1,3 +1,4 @@
+import os
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters, PreCheckoutQueryHandler
 from telegram import InputMediaPhoto, LabeledPrice
 import logging
@@ -20,7 +21,7 @@ logging.basicConfig(
 )
 
 # Конфигурация
-BOT_TOKEN = "8219143818:AAFlS5Wxzc2HdtkB6fxtQaKbd_h5ih0F24Y"
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
 PAYMENT_PROVIDER_TOKEN = "390540012:LIVE:83099"  # ЮКасса через Telegram Payments
 
 # Бесплатный аккаунт
